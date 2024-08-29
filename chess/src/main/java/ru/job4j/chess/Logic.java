@@ -1,9 +1,9 @@
 package ru.job4j.chess;
 
+import java.util.Arrays;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
-import java.util.Arrays;
 
 public class Logic {
     private final Figure[] figures = new Figure[32];
