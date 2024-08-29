@@ -18,6 +18,7 @@ public class LogicTest {
         });
         assertThat(exception.getMessage()).isEqualTo("Figure not found on the board.");
     }
+
     @Test
     public void whenMoveThenImpossibleMoveException() {
         Logic logic = new Logic();
