@@ -13,14 +13,20 @@ public class LogicTest {
     @Test
     public void whenMoveThenFigureNotFoundException() {
         Logic logic = new Logic();
-        FigureNotFoundException exception = assertThrows(FigureNotFoundException.class, () -> logic.move(Cell.C1, Cell.H6));
+        FigureNotFoundException exception = assertThrows(
+                FigureNotFoundException.class,
+                () -> logic.move(Cell.C1, Cell.H6)
+        );
         assertThat(exception.getMessage()).isEqualTo("Figure not found on the board.");
     }
 
     @Test
     public void whenMoveThenImpossibleMoveException() {
         Logic logic = new Logic();
-        FigureNotFoundException exception = assertThrows(FigureNotFoundException.class, () -> logic.move(Cell.C1, Cell.H6));
+        FigureNotFoundException exception = assertThrows(
+                FigureNotFoundException.class,
+                () -> logic.move(Cell.C1, Cell.H6)
+        );
     }
 
     @Test
@@ -28,6 +34,9 @@ public class LogicTest {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.add(new BishopBlack(Cell.D2));
-        OccupiedCellException exception = assertThrows(OccupiedCellException.class, () -> logic.move(Cell.C1, Cell.H6));
+        OccupiedCellException exception = assertThrows(
+                OccupiedCellException.class,
+                () -> logic.move(Cell.C1, Cell.H6)
+        );
     }
 }
