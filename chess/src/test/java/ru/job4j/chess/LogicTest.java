@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.BishopBlack;
 
+
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LogicTest {
 
     @Test
-    public void whenMoveThenFigureNotFoundException()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
+    public void whenMoveThenFigureNotFoundException(){
         Logic logic = new Logic();
         FigureNotFoundException exception = assertThrows(FigureNotFoundException.class, () -> {
             logic.move(Cell.C1, Cell.H6);
